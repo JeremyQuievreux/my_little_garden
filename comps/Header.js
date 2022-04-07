@@ -9,11 +9,11 @@ function Header() {
             <h1>My Little Garden</h1>
           </div>
           <nav>
-            <Link href={"/"}><a>Acceuil</a></Link>
-            <Link href={"/products"}><a>Nos Produits</a></Link>
-            <Link href={"/about"}><a>A Propos</a></Link>
-            <Link href={"/contact"}><a>Contactez nous</a></Link>
-            <Link href={"/cart"}><a>Panier</a></Link>
+            <Link href={"/"}><a><div><p>Acceuil</p></div></a></Link>
+            <Link href={"/products"}><a><div><p>Nos Produits</p></div></a></Link>
+            <Link href={"/about"}><a><div><p>A Propos</p></div></a></Link>
+            <Link href={"/contact"}><a><div><p>Contactez nous</p></div></a></Link>
+            <Link href={"/cart"}><a><div><p>Panier</p><p className={styles.cart_number}>0</p></div></a></Link>
           </nav>
       </header>
   )

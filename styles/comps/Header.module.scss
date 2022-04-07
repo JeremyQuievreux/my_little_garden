@@ -12,12 +12,27 @@
     padding: 0 20px;
 
     nav{
+        display: flex;
         a{
+            display: block;
             margin: 20px;
             font-size: 20px;
             font-weight: bold;
-            &:hover{
-                border-bottom: 2px solid $header_text_color;
+            div{
+                display: flex;
+                &:hover{
+                    border-bottom: 2px solid white;
+                    margin-bottom: -2px;
+                }
+                .cart_number{
+                    background-color: $header_text_color;
+                    color: $primary;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin-left: 10px;
+                }
             }
         }
     }

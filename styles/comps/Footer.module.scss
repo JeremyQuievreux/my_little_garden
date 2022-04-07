@@ -1,0 +1,11 @@
+@import '../colors.scss';
+
+.container{
+    height: 80px;
+    background-color: $primary;
+    color: $header_text_color;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

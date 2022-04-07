@@ -13,6 +13,7 @@ function Header() {
             <Link href={"/products"}><a>Nos Produits</a></Link>
             <Link href={"/about"}><a>A Propos</a></Link>
             <Link href={"/contact"}><a>Contactez nous</a></Link>
+            <Link href={"/cart"}><a>Panier</a></Link>
           </nav>
       </header>
   )

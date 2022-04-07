@@ -4,7 +4,7 @@
     background-color: $primary;
     height: 100px;
     color: $header_text_color;
-
+    border-bottom: 3px solid $dark_primary;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -4,7 +4,7 @@ import React from 'react'
 import styles from '../../styles/pages/ProductDetail.module.scss'
 
 export const getStaticPaths = async () => {
-  const result = await axios.get('https://mylittlegarden.netlify.app/api/products');
+  const result = await axios.get('http://localhost:3000/api/products');
   const data = await result.data;
 
   const paths = data.map(product => {
@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const productid = context.params.productid;
-  const res = await axios('https://mylittlegarden.netlify.app/api/products/'+ productid);
+  const res = await axios('http://localhost:3000/api/products/'+ productid);
   const data = await res.data;
 
   return {

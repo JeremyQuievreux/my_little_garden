@@ -6,8 +6,6 @@ import ProductCard from '../../comps/ProductCard';
 import Product from '../../models/Product';
 import dbConnect from '../../utils/dbConnect';
 
-const axios = require('axios').default;
-
 function products({products}) {
 
   return (

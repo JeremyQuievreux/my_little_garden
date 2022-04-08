@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React from 'react'
 
+import Product from '../../models/Product';
+import dbConnect from '../../utils/dbConnect';
 
 import styles from '../../styles/pages/ProductDetail.module.scss'
 
-/* export const getStaticPaths = async () => {
+export const getStaticPaths = async () => {
 
   dbConnect();
 
@@ -37,21 +39,21 @@ export const getStaticProps = async (context) => {
       product: JSON.parse(JSON.stringify(data))
     }
   }
-} */
+}
 
 
 function productDetail({product}) {
   return (
     <div className={styles.main_container}>
       <p>Work In progress...</p>
-      {/* <div className={styles.product_container}>
+      <div className={styles.product_container}>
         <div className={styles.left_block}>
           <img src={product.url_pic} alt="" />
         </div>
         <div className={styles.right_block}>
           <h2>{product.name}</h2>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React  from 'react'
-import styles from '../styles/pages/Products.module.scss'
+import styles from '../../styles/pages/Products.module.scss'
 
-import ProductCard from '../comps/ProductCard';
+import ProductCard from '../../comps/ProductCard';
 
 const axios = require('axios').default;
 

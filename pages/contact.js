@@ -6,6 +6,7 @@ function contact() {
   return (
     <div className={styles.container}>
         <h1>Page de Contact</h1>
+        <p>Work in progress...</p>
     </div>
   )
 }

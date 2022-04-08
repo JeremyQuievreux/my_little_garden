@@ -34,6 +34,7 @@ export const getStaticProps = async (context) => {
 function productDetail({product}) {
   return (
     <div className={styles.main_container}>
+      <p>Work In progress...</p>
       <div className={styles.product_container}>
         <div className={styles.left_block}>
           <img src={product.url_pic} alt="" />

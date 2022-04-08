@@ -6,6 +6,7 @@ function cart() {
   return (
     <div className={styles.container}>
         <h1>Paga panier</h1>
+        <p>Work in progress...</p>
     </div>
   )
 }

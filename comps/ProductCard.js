@@ -24,7 +24,7 @@ function ProductCard({product}) {
 
     const showBuyProduct = (e) => {
         e.preventDefault()
-        console.log(product.name , quantity, "pour" , product.price * quantity, " €");
+        alert(`${product.name} x ${quantity} pour un total de ${product.price * quantity} €`);
         setQuantity(1)
     }
 
@@ -40,13 +40,13 @@ function ProductCard({product}) {
                 </div>
                 <div className={styles.product_footer}>
                     <p>Quantité : </p>
-                    <div>
-                        <button className={styles.quantity_button} onClick={(e)=> removeQuantity(e)}>
-                        <p>-</p>
-                        </button> {quantity} <button className={styles.quantity_button} onClick={(e) => addQuantity(e)}>+</button>
+                    <div className={styles.product_quantity}>
+                        <button className={styles.quantity_button} onClick={(e) => removeQuantity(e)}>-</button>
+                        <p>{quantity}</p>
+                        <button className={styles.quantity_button} onClick={(e) => addQuantity(e)}>+</button>
                     </div>
                     <p>{product.price} €</p>
-                    <button onClick={(e) => showBuyProduct(e)}>Ajouter au panier</button>
+                    <button onClick={(e) => showBuyProduct(e)} className={styles.add_button}>Ajouter au panier</button>
                 </div>
             </a>
         </Link>

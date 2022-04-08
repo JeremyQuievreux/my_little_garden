@@ -1,0 +1,27 @@
+@import '../colors.scss';
+
+.main_container{
+    min-height: calc(100vh - 180px);
+    .product_container{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 50px auto;
+        border: 2px solid $dark_primary;
+        padding: 10px;
+        .left_block{
+            border: 2px solid $dark_primary;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                min-width: 100%;
+            }
+        }
+        .right_block{
+            border: 2px solid black;
+            width: 400px;
+        }
+    }
+}

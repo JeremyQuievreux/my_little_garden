@@ -8,6 +8,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 15px $primary;
+    transition: box-shadow 0.8s;
+    &:hover{
+        box-shadow: 0 0 30px $dark_primary;
+    }
     .product_header{
         background-color: $primary;
         width: 100%;
@@ -34,9 +39,45 @@
         margin-top: 20px;
         padding: 10px 0;
         color: $header_text_color;
-        .quantity_button{
-            width: 20px;
-            height: 20px;
+        
+        .product_quantity{
+            background-color: white;
+            color: $primary;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            .quantity_button{
+                background-color: $primary;
+                border-color: $dark_primary;
+                color: white;
+                margin: 2px;
+                font-size: 20px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $header_text_color;
+                    color: $dark_primary;
+                }
+            }
+        }
+        .add_button{
+            background-color: $header_text_color;
+            border-color: $dark_primary;
+            color: $dark_primary;
+            height: 30px;
+            padding: 0 10px;
+            cursor: pointer;
+            &:hover{
+                cursor: pointer;
+                background-color: $light_primary;
+                color: $header_text_color;
+            }
         }
     }
 }

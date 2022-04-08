@@ -7,10 +7,15 @@ import dbConnect from '../../utils/dbConnect';
 import styles from '../../styles/pages/ProductDetail.module.scss'
 
 export const getStaticPaths = async () => {
-  const result = await axios.get('http://localhost:3000/api/products');
-  const data = await result.data;
 
-  const paths = data.map(product => {
+  dbConnect();
+
+  const data = await Product.find();
+
+  const parsed = JSON.parse(JSON.stringify(data))
+
+
+  const paths = parsed.map(product => {
     return {
       params: {productid: product._id.toString()}
     }

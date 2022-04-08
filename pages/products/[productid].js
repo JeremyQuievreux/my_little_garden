@@ -1,6 +1,9 @@
 import axios from 'axios'
 import React from 'react'
 
+import Product from '../../models/Product';
+import dbConnect from '../../utils/dbConnect';
+
 import styles from '../../styles/pages/ProductDetail.module.scss'
 
 export const getStaticPaths = async () => {
@@ -20,16 +23,19 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
+  
   const productid = context.params.productid;
-  const res = await axios('http://localhost:3000/api/products/'+ productid);
-  const data = await res.data;
+  dbConnect();
+
+  const data = await Product.findOne({_id: productid});
 
   return {
     props: {
-      product: data
+      product: JSON.parse(JSON.stringify(data))
     }
   }
 }
+
 
 function productDetail({product}) {
   return (

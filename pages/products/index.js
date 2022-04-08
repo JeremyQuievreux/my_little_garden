@@ -3,6 +3,9 @@ import styles from '../../styles/pages/Products.module.scss'
 
 import ProductCard from '../../comps/ProductCard';
 
+import Product from '../../models/Product';
+import dbConnect from '../../utils/dbConnect';
+
 const axios = require('axios').default;
 
 function products({products}) {
@@ -24,15 +27,14 @@ function products({products}) {
 export default products
 
 export async function getStaticProps() {
-  try {
-    const result = await axios.get('http://localhost:3000/api/products');
-    const data = await result.data;
-    return {
-        props: {
-            products: data
-        }
+
+  dbConnect();
+
+  const data = await Product.find();
+
+  return {
+    props: {
+      products: JSON.parse(JSON.stringify(data))
     }
-  } catch (error) {
-    console.log(error);
   }
 }

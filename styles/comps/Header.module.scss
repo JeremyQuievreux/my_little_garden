@@ -8,9 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 20px;
-
     nav{
         display: flex;
         a{
@@ -32,6 +30,80 @@
                     border-radius: 50%;
                     text-align: center;
                     margin-left: 10px;
+                }
+            }
+        }
+    }
+    .menu_mobile{
+        display: none;
+    }
+}
+@media (max-width: 1050px){
+    .container{
+        flex-direction: column;
+        nav{
+            a{
+                font-size: 15px;
+                div{
+                    .cart_number{
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px){
+    .container{
+        flex-direction: row;
+        height: 50px;
+        nav{
+            display: none;
+        }
+        .menu_mobile{
+            display: initial;
+            cursor: pointer;
+            .drop_down_menu{
+                position: absolute;
+                top: 47px;
+                right: 0px;
+                background-color: $primary;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-left: 3px solid $dark_primary;
+                border-bottom: 3px solid $dark_primary;
+                a{
+                    width: 100%;
+                    margin: 0 5px;
+                    div{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 35px;
+                        &:hover{
+                            background-color: $header_text_color;
+                            color: $primary;
+                        }
+                    }
+                }
+                .cart_line{
+                    display: flex;
+
+                }
+                .cart_number{
+                    background-color: $header_text_color;
+                    color: $primary;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 2px;
                 }
             }
         }

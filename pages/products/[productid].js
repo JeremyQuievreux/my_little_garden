@@ -41,7 +41,7 @@ export const getStaticProps = async (context) => {
   }
 }
 
-function productDetail({product}) {
+function ProductDetail({product}) {
   //state
   const [ quantity, setQuantity ] = useState(1)
   //fonction on button to add quantity
@@ -89,4 +89,4 @@ function productDetail({product}) {
   )
 }
 
-export default productDetail
+export default ProductDetail

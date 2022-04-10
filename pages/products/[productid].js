@@ -4,6 +4,8 @@ import React from 'react'
 import Product from '../../models/Product';
 import dbConnect from '../../utils/dbConnect';
 
+import Image from 'next/image'
+
 import styles from '../../styles/pages/ProductDetail.module.scss'
 
 export const getStaticPaths = async () => {
@@ -48,7 +50,7 @@ function productDetail({product}) {
       <p>Work In progress...</p>
       <div className={styles.product_container}>
         <div className={styles.left_block}>
-          <img src={product.url_pic} alt="" />
+          <Image src={product.url_pic} alt="" height={400} width={400} />
         </div>
         <div className={styles.right_block}>
           <h2>{product.name}</h2>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import styles from '../styles/comps/ProductCard.module.scss'
 
@@ -36,7 +37,7 @@ function ProductCard({product}) {
                     <p>{product.name}</p>
                 </div>
                 <div className={styles.product_body}>
-                    <img src={product.url_pic} alt="" />
+                    <Image src={product.url_pic} alt="" height={400} width={400}/>
                 </div>
                 <div className={styles.product_footer}>
                     <p>Quantité : </p>

@@ -1,19 +1,21 @@
+//base React
 import React, { useState } from 'react'
+//base next.js
 import Link from 'next/link'
 import Image from 'next/image'
-
+//styles
 import styles from '../styles/comps/ProductCard.module.scss'
 
 
 function ProductCard({product}) {
-
+    //state
     const [ quantity, setQuantity ] = useState(1)
-
+    //fonction on button to add quantity
     const addQuantity = (e) => {
         e.preventDefault()
         setQuantity(quantity + 1)
     }
-
+    //fonction on button to remove quantity
     const removeQuantity = (e) => {
         e.preventDefault()
         if (quantity == 1) {
@@ -22,7 +24,7 @@ function ProductCard({product}) {
             setQuantity(quantity - 1)
         }
     }
-
+    //fonction on validate button
     const showBuyProduct = (e) => {
         e.preventDefault()
         alert(`${product.name} x ${quantity} pour un total de ${product.price * quantity} €`);

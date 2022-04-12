@@ -4,7 +4,7 @@ import styles from '../styles/pages/Cart.module.scss'
 
 import { CartContext } from './_app'
 
-function cart() {
+function Cart() {
 
   const cartContextValue = useContext(CartContext)
 
@@ -22,4 +22,4 @@ function cart() {
   )
 }
 
-export default cart
+export default Cart

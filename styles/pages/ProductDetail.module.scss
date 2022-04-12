@@ -8,12 +8,12 @@
     .product_container{
         display: flex;
         justify-content: space-around;
-        width: 50%;
         margin: 50px 0;
         padding: 30px;
         border: 2px solid $dark_primary;
         background-color: $primary;
         border-radius: 5px;
+        width: 75%;
         .left_block{
             border: 2px solid $header_text_color;
             border-radius: 5px;
@@ -21,13 +21,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-right: 20px;
             img{
                 min-width: 100%;
                 border-radius: 3px;
             }
         }
         .right_block{
-            width: 400px;
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -85,6 +86,27 @@
                         cursor: pointer;
                         background-color: $light_primary;
                         color: $header_text_color;
+                    }
+                }
+            }
+            .product_body{
+                width: 100%;
+                .product_calendar{
+                    margin-top: 10px;
+                }
+                .product_table{
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    .table_case{
+                        border: 2px solid $primary;
+                        height: 30px;
+                        width: 30px;
+                        text-align: center;
+                        flex-grow: 1;
+                    }
+                    .green{
+                        background-color: $light_primary;
                     }
                 }
             }

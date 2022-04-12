@@ -67,6 +67,7 @@
             cursor: pointer;
             .drop_down_menu{
                 position: absolute;
+                z-index: 100;
                 top: 47px;
                 right: 0px;
                 background-color: $primary;

@@ -64,6 +64,13 @@ function ProductDetail({product}) {
       alert(`${product.name} x ${quantity} pour un total de ${product.price * quantity} €`);
       setQuantity(1)
   }
+
+  const stylecase = (value) => {
+    if (value) {
+      return (styles.green)
+    }
+  }
+
   return (
     <div className={styles.main_container}>
       <p>Work In progress...</p>
@@ -71,8 +78,38 @@ function ProductDetail({product}) {
         <div className={styles.left_block}>
           <Image src={product.url_pic} alt="" height={400} width={400} />
         </div>
+
         <div className={styles.right_block}>
           <h2>{product.name}</h2>
+          <p>Description : </p>
+
+          <div className={styles.product_body}>
+            <div className={styles.product_calendar}>
+              <h2>Semis : </h2>
+              <div className={styles.product_table}>
+                {Object.entries(product.semis).map((test) => {
+                  return (
+                      <div className={`${styles.table_case} ${stylecase(test[1])}`}>
+                        <p>{test[0].slice(0,1).toUpperCase()}</p>
+                      </div>
+                  )
+                })}
+              </div>
+            </div>
+            <div className={styles.product_calendar}>
+              <h2>Récoltes : </h2>
+              <div className={styles.product_table}>
+                {Object.entries(product.recolte).map((test) => {
+                  return (
+                      <div className={`${styles.table_case} ${stylecase(test[1])}`}>
+                        <p>{test[0].slice(0,1).toUpperCase()}</p>
+                      </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
           <div className={styles.footer}>
             <p>Quantité : </p>
             <div className={styles.product_quantity}>

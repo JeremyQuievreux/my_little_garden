@@ -1,8 +1,10 @@
-import React , { useState } from 'react'
+import React , { useState , useContext} from 'react'
 import Link from 'next/link'
 import styles from '../styles/comps/Header.module.scss'
 
 import { TiThMenu } from 'react-icons/ti'
+
+import { CartContext } from '../pages/_app'
 
 function Header() {
 
@@ -16,6 +18,8 @@ function Header() {
     }
   }
 
+  const cartContextValue = useContext(CartContext)
+
   return (
       <header className={styles.container}>
           <div className={styles.logo}>
@@ -26,7 +30,7 @@ function Header() {
             <Link href={"/products"}><a><div><p>Nos Produits</p></div></a></Link>
             <Link href={"/about"}><a><div><p>A Propos</p></div></a></Link>
             <Link href={"/contact"}><a><div><p>Contactez nous</p></div></a></Link>
-            <Link href={"/cart"}><a><div><p>Panier</p><p className={styles.cart_number}>0</p></div></a></Link>
+            <Link href={"/cart"}><a><div><p>Panier</p><p className={styles.cart_number}>{cartContextValue.data.length}</p></div></a></Link>
           </nav>
           <div className={styles.menu_mobile}>
             <div className={styles.menu_icon} onClick={() => toogleMenu()}>
@@ -38,7 +42,7 @@ function Header() {
                 <Link href={"/products"}><a onClick={() => toogleMenu()}><div><p>Nos Produits</p></div></a></Link>
                 <Link href={"/about"}><a onClick={() => toogleMenu()}><div><p>A Propos</p></div></a></Link>
                 <Link href={"/contact"}><a onClick={() => toogleMenu()}><div><p>Contactez nous</p></div></a></Link>
-                <Link href={"/cart"}><a onClick={() => toogleMenu()}><div className={styles.cart_line}><p>Panier</p><p className={styles.cart_number}>0</p></div></a></Link>
+                <Link href={"/cart"}><a onClick={() => toogleMenu()}><div className={styles.cart_line}><p>Panier</p><p className={styles.cart_number}>{cartContextValue.data.length}</p></div></a></Link>
               </div>
             }
           </div>

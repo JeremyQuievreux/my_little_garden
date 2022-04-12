@@ -87,9 +87,9 @@ function ProductDetail({product}) {
             <div className={styles.product_calendar}>
               <h2>Semis : </h2>
               <div className={styles.product_table}>
-                {Object.entries(product.semis).map((test) => {
+                {Object.entries(product.semis).map((test,index) => {
                   return (
-                      <div className={`${styles.table_case} ${stylecase(test[1])}`}>
+                      <div key={index}className={`${styles.table_case} ${stylecase(test[1])}`}>
                         <p>{test[0].slice(0,1).toUpperCase()}</p>
                       </div>
                   )

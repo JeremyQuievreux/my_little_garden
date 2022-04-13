@@ -14,7 +14,7 @@ function Cart() {
         <p>Work in progress...</p>
         {cartContextValue.data && cartContextValue.data.map((item,index) => {
           return(
-            <p key={index}>{item.article} X {item.quantity}</p>
+            <p key={index}>{item.article.name} X {item.quantity}</p>
           )
         })}
         <button onClick={() => cartContextValue.updateCart([])}>Reset Cart</button>

@@ -1,5 +1,6 @@
 //base React
-import React, { useState } from 'react'
+import React, { useState , useContext } from 'react'
+import { CartContext } from '../pages/_app'
 //base next.js
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,6 +9,9 @@ import styles from '../styles/comps/ProductCard.module.scss'
 
 
 function ProductCard({product}) {
+    //context
+    const cartContextValue = useContext(CartContext)
+
     //state
     const [ quantity, setQuantity ] = useState(1)
     //fonction on button to add quantity
@@ -25,11 +29,14 @@ function ProductCard({product}) {
         }
     }
     //fonction on validate button
-    const showBuyProduct = (e) => {
+    const addToCart = (e, product) => {
         e.preventDefault()
-        alert(`${product.name} x ${quantity} pour un total de ${product.price * quantity} €`);
+        // start here
+        cartContextValue.updateCart([...cartContextValue.data, {article: product, quantity}])
+        // finish here
         setQuantity(1)
     }
+
 
   return (
         <div className={styles.container}>
@@ -49,7 +56,7 @@ function ProductCard({product}) {
                         <button className={styles.quantity_button} onClick={(e) => addQuantity(e)}>+</button>
                     </div>
                     <p>{product.price} €</p>
-                    <button onClick={(e) => showBuyProduct(e)} className={styles.add_button}>Ajouter au panier</button>
+                    <button onClick={(e) => addToCart(e, product)} className={styles.add_button}>Ajouter au panier</button>
                 </div>
             </a>
         </Link>

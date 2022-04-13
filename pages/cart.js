@@ -8,13 +8,15 @@ function Cart() {
 
   const cartContextValue = useContext(CartContext)
 
+  const cartLines = cartContextValue.data
+
   return (
     <div className={styles.container}>
         <h1>Paga panier</h1>
         <p>Work in progress...</p>
-        {cartContextValue.data && cartContextValue.data.map((item,index) => {
+        {cartLines && cartLines.map((cartLine) => {
           return(
-            <p key={index}>{item.article.name} X {item.quantity}</p>
+            <p key={cartLine.article._id}>{cartLine.article.name} X {cartLine.quantity}</p>
           )
         })}
         <button onClick={() => cartContextValue.updateCart([])}>Reset Cart</button>

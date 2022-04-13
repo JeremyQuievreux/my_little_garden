@@ -1,5 +1,7 @@
 //base React
-import React , { useState }from 'react'
+import React , { useState , useContext }from 'react'
+
+import { CartContext } from '../_app';
 //Utils for connection to db
 import Product from '../../models/Product';
 import dbConnect from '../../utils/dbConnect';
@@ -44,6 +46,8 @@ export const getStaticProps = async (context) => {
 function ProductDetail({product}) {
   //state
   const [ quantity, setQuantity ] = useState(1)
+  //Context
+  const cartContextValue = useContext(CartContext)
   //fonction on button to add quantity
   const addQuantity = (e) => {
       e.preventDefault()
@@ -59,9 +63,11 @@ function ProductDetail({product}) {
       }
   }
   //fonction on validate button
-  const showBuyProduct = (e) => {
+  const addToCart = (e) => {
       e.preventDefault()
-      alert(`${product.name} x ${quantity} pour un total de ${product.price * quantity} €`);
+
+      cartContextValue.updateCart([...cartContextValue.data, {article: product, quantity}])
+
       setQuantity(1)
   }
 
@@ -118,7 +124,7 @@ function ProductDetail({product}) {
                 <button className={styles.quantity_button} onClick={(e) => addQuantity(e)}>+</button>
             </div>
             <p>{product.price} €</p>
-            <button onClick={(e) => showBuyProduct(e)} className={styles.add_button}>Ajouter au panier</button>
+            <button onClick={(e) => addToCart(e)} className={styles.add_button}>Ajouter au panier</button>
           </div>
         </div>
       </div>

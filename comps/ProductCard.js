@@ -31,8 +31,10 @@ function ProductCard({product}) {
     //fonction on validate button
     const addToCart = (e, product) => {
         e.preventDefault()
+        //start here test 
+        //finish here
         // start here
-        cartContextValue.updateCart([...cartContextValue.data, {article: product, quantity}])
+        cartContextValue.updateCart([...cartContextValue.data, {...product, quantity}])
         // finish here
         setQuantity(1)
     }

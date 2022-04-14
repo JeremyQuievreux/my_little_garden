@@ -31,11 +31,12 @@ function ProductCard({product}) {
     //fonction on validate button
     const addToCart = (e, product) => {
         e.preventDefault()
-        //start here test 
+        //Array of Objet who contain all articles
+        const allArticles = cartContextValue.data
+        //start here
+
         //finish here
-        // start here
         cartContextValue.updateCart([...cartContextValue.data, {...product, quantity}])
-        // finish here
         setQuantity(1)
     }
 

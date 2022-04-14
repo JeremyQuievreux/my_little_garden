@@ -33,10 +33,27 @@ function ProductCard({product}) {
         e.preventDefault()
         //Array of Objet who contain all articles
         const allArticles = cartContextValue.data
-        //start here
+        //funtion pass to some function (just check the id)
+        const idCheck = (article) => article._id == product._id;
+        //if id of product is in the cart
+        if (allArticles.some(idCheck)) {
+            //get all "lines" of article who the id is not the same
+            const foundNotGoodID = allArticles.filter(article => article._id != product._id);
+            //get the "line" whit the same id
+            const foundGoodID = allArticles.filter(article => article._id == product._id);
+            //update the quantity of the "line"
+            foundGoodID[0].quantity += quantity
+            //concat the 2 array above
+            const concated = foundNotGoodID.concat(foundGoodID)
+            //update the cart Context Data
+            cartContextValue.updateCart(concated)
+        //if id of product is not in the cart
+        } else {
+            //just update the cart contaxt data
+            cartContextValue.updateCart([...cartContextValue.data, {...product, quantity: quantity}])
+        }
 
         //finish here
-        cartContextValue.updateCart([...cartContextValue.data, {...product, quantity}])
         setQuantity(1)
     }
 

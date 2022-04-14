@@ -63,13 +63,33 @@ function ProductDetail({product}) {
       }
   }
   //fonction on validate button
-  const addToCart = (e) => {
-      e.preventDefault()
+  const addToCart = (e, product) => {
+    e.preventDefault()
+    //Array of Objet who contain all articles
+    const allArticles = cartContextValue.data
+    //funtion pass to some function (just check the id)
+    const idCheck = (article) => article._id == product._id;
+    //if id of product is in the cart
+    if (allArticles.some(idCheck)) {
+        //get all "lines" of article who the id is not the same
+        const foundNotGoodID = allArticles.filter(article => article._id != product._id);
+        //get the "line" whit the same id
+        const foundGoodID = allArticles.filter(article => article._id == product._id);
+        //update the quantity of the "line"
+        foundGoodID[0].quantity += quantity
+        //concat the 2 array above
+        const concated = foundNotGoodID.concat(foundGoodID)
+        //update the cart Context Data
+        cartContextValue.updateCart(concated)
+    //if id of product is not in the cart
+    } else {
+        //just update the cart contaxt data
+        cartContextValue.updateCart([...cartContextValue.data, {...product, quantity: quantity}])
+    }
 
-      cartContextValue.updateCart([...cartContextValue.data, {article: product, quantity}])
-
-      setQuantity(1)
-  }
+    //finish here
+    setQuantity(1)
+}
 
   const stylecase = (value) => {
     if (value) {
@@ -124,7 +144,7 @@ function ProductDetail({product}) {
                 <button className={styles.quantity_button} onClick={(e) => addQuantity(e)}>+</button>
             </div>
             <p>{product.price} €</p>
-            <button onClick={(e) => addToCart(e)} className={styles.add_button}>Ajouter au panier</button>
+            <button onClick={(e) => addToCart(e, product)} className={styles.add_button}>Ajouter au panier</button>
           </div>
         </div>
       </div>

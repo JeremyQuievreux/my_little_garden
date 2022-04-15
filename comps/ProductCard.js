@@ -11,7 +11,6 @@ import styles from '../styles/comps/ProductCard.module.scss'
 function ProductCard({product}) {
     //context
     const cartContextValue = useContext(CartContext)
-
     //state
     const [ quantity, setQuantity ] = useState(1)
     //fonction on button to add quantity
@@ -52,8 +51,6 @@ function ProductCard({product}) {
             //just update the cart contaxt data
             cartContextValue.updateCart([...cartContextValue.data, {...product, quantity: quantity}])
         }
-
-        //finish here
         setQuantity(1)
     }
 
@@ -66,7 +63,7 @@ function ProductCard({product}) {
                     <p>{product.name}</p>
                 </div>
                 <div className={styles.product_body}>
-                    <Image src={product.url_pic} alt="" height={400} width={400}/>
+                    <Image src={product.url_pic} alt="" height={300} width={300}/>
                 </div>
                 <div className={styles.product_footer}>
                     <p>Quantité : </p>

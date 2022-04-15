@@ -15,9 +15,7 @@ export const getStaticPaths = async () => {
   dbConnect();
   //get data from mongodb
   const data = await Product.find();
-
   const parsed = JSON.parse(JSON.stringify(data))
-
   const paths = parsed.map(product => {
     return {
       params: {productid: product._id.toString()}
@@ -30,12 +28,9 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
-  
   const productid = context.params.productid;
   dbConnect();
-
   const data = await Product.findOne({_id: productid});
-
   return {
     props: {
       product: JSON.parse(JSON.stringify(data))
@@ -86,8 +81,6 @@ function ProductDetail({product}) {
         //just update the cart contaxt data
         cartContextValue.updateCart([...cartContextValue.data, {...product, quantity: quantity}])
     }
-
-    //finish here
     setQuantity(1)
 }
 

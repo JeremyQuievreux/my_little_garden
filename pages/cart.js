@@ -38,7 +38,6 @@ function Cart() {
         </>
         : <p>Votre panier est vide</p>}
         </div>
-        <button onClick={() => cartContextValue.updateCart([])}>Reset Cart</button>
     </div>
   )
 }

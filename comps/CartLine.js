@@ -15,16 +15,20 @@ function CartLine({article}) {
 
   return (
     <div className={styles.line_container}>
+      <div className={styles.line_left_block}>
         <Images src={article.url_pic} width={40} height={40} />
-        <div className={styles.article_name}>
-          <p>{article.name} </p>
-          <p>{Number(article.price).toFixed(2)} €</p>
+        <div className={styles.article_title}>
+          <p className={styles.article_name} title={article.name}>{article.name} </p>
+          <p className={styles.article_price}>{Number(article.price).toFixed(2)} €</p>
         </div>
+      </div>
+      <div className={styles.line_right_block}>
         <AiFillMinusCircle className={styles.line_button} onClick={() => removeCartQuantity(article, cartContextValue)}/>
         <p className={styles.article_quantity}>X {article.quantity}</p>
         <AiFillPlusCircle className={styles.line_button} onClick={() => addCartQuantity(article, cartContextValue)}/>
         <p className={styles.article_total_price}>{(article.quantity * article.price).toFixed(2)} €</p>
         <BsFillTrashFill className={styles.article_delete} onClick={() => deleteFromCart(article, cartContextValue)}/>
+      </div>
     </div>
   )
 }

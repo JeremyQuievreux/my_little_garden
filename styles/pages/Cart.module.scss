@@ -11,25 +11,33 @@
         border: 2px solid $primary;
         border-radius: 3px;
         box-shadow: 0 0 20px $primary;
+        margin-bottom: 10px;
         .total_line{
             display: flex;
             justify-content: flex-end;
             padding-right: 5px;
             .total_word{
-                width: 10%;
                 //border: 2px solid red;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-weight: bold;
+                margin-right: 20px;
             }
             .total_price{
-                width: 10%;
                 //border: 2px solid red;
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
             }
+        }
+    }
+}
+@media (max-width: 1050px) {
+    .container{
+
+        .cart_line_container{
+            width: 90%;
         }
     }
 }

@@ -5,33 +5,79 @@
     margin: 5px;
     padding-bottom: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    .article_name{
-        //border: 2px solid red;
-        width: 40%;
+    justify-content: space-between;
+    .line_left_block{
+        display: flex;
+        align-items: center;
+        width: 65%;
+        .article_title{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            margin-left: 10px;
+            .article_name{
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .article_price{
+                display: flex;
+                justify-content: flex-end;
+                width: 20%;
+            }
+        }
+    }
+    .line_right_block{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        .article_quantity{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+        }
+        .article_total_price{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+        }
+        .article_delete{
+            color: $dark_primary;
+            cursor: pointer;
+        }
+        .line_button{
+            color: $dark_primary;
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+        }
     }
-    .article_quantity{
-        //border: 2px solid red;
-        width: 5%;
-        text-align: center;
+}
+@media (max-width: 1050px) {
+    .line_container{
+        .line_left_block{
+            width: 60%;
+        }
+        .line_right_block{
+            width: 35%;
+        }
     }
-    .article_total_price{
-        //border: 2px solid red;
-        width: 10%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .article_delete{
-        color: $dark_primary;
-        cursor: pointer;
-    }
-    .line_button{
-        color: $dark_primary;
-        height: 20px;
-        width: 20px;
-        cursor: pointer;
+}
+@media (max-width: 650px) {
+    .line_container{
+        flex-direction: column;
+        .line_left_block{
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .line_right_block{
+            width: 100%;
+        }
     }
 }

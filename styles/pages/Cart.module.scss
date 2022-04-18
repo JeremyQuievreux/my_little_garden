@@ -17,14 +17,15 @@
             padding-right: 5px;
             .total_word{
                 width: 10%;
-                border: 2px solid red;
+                //border: 2px solid red;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                font-weight: bold;
             }
             .total_price{
                 width: 10%;
-                border: 2px solid red;
+                //border: 2px solid red;
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;

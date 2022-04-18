@@ -1,1 +1,26 @@
 @import '../colors.scss';
+
+.line_container{
+    border-bottom: 2px solid $primary;
+    margin: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .article_name{
+        border: 2px solid red;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .article_quantity{
+        border: 2px solid red;
+        width: 5%;
+    }
+    .article_total_price{
+        border: 2px solid red;
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

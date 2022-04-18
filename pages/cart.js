@@ -11,17 +11,33 @@ function Cart() {
 
   const articles = cartContextValue.data
 
+  const getTotalPrice = () => {
+    let totalPrice = 0
+    articles.forEach(article => {
+      totalPrice += article.price * article.quantity
+    })
+    return totalPrice.toFixed(2)
+  }
+
   return (
     <div className={styles.container}>
         <h1>Page panier</h1>
         <p>Work in progress...</p>
-        {articles && articles.map((article) => {
-          return(
-            <div className={styles.cart_line_container}>
-              <CartLine article={article}/>
-            </div>
-          )
-        })}
+        <div className={styles.cart_line_container}>
+        {articles.length > 0 
+        ? <>
+          {articles.map((article) => {
+            return(
+                <CartLine article={article} key={article._id}/>
+                )
+              })}
+          <div className={styles.total_line}>
+            <p className={styles.total_word}>Total : </p>
+            <p className={styles.total_price}>{getTotalPrice()} €</p>
+          </div>
+        </>
+        : <p>Votre panier est vide</p>}
+        </div>
         <button onClick={() => cartContextValue.updateCart([])}>Reset Cart</button>
     </div>
   )

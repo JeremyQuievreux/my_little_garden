@@ -1,4 +1,4 @@
-export const addToCart = (e, product, cartContextValue, quantity, setQuantity) => {
+export const addToCart = (e, product, cartContextValue, quantity) => {
     e.preventDefault()
     //Array of Objet who contain all articles
     const allArticles = cartContextValue.data
@@ -17,7 +17,6 @@ export const addToCart = (e, product, cartContextValue, quantity, setQuantity) =
         cartContextValue.updateCart([...allArticles])
     }
     //Reset the quantity
-    setQuantity(1)
 }
 export const deleteFromCart = (product, cartContextValue) => {
     //Array of Objet who contain all articles
@@ -25,20 +24,6 @@ export const deleteFromCart = (product, cartContextValue) => {
     //Find the article in the array of articles by id
     const otherArticles = allArticles.filter(article => article._id != product._id)
     cartContextValue.updateCart([...otherArticles])
-}
-
-export const addQuantity = (e, quantity, setQuantity) => {
-    e.preventDefault()
-    setQuantity(quantity + 1)
-}
-
-export const removeQuantity = (e, quantity, setQuantity) => {
-    e.preventDefault()
-    if (quantity == 1) {
-        null
-    } else {
-        setQuantity(quantity - 1)
-    }
 }
 
 export const addCartQuantity = (product, cartContextValue) => {

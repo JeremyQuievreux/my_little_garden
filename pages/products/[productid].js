@@ -1,5 +1,5 @@
 //base React
-import React , { useState , useContext }from 'react'
+import React , { useContext , useReducer }from 'react'
 
 import { CartContext } from '../_app';
 //Utils for connection to db
@@ -10,7 +10,9 @@ import Image from 'next/image'
 //Style
 import styles from '../../styles/pages/ProductDetail.module.scss'
 // import external fonction to set quantity and add to cart
-import { addToCart, addQuantity, removeQuantity} from '../../utils/addtocart';
+import { addToCart } from '../../utils/addtocart';
+
+import { quantityReducer } from '../../reducer/quantityReducer';
 
 export const getStaticPaths = async () => {
   //Connect to db
@@ -42,9 +44,11 @@ export const getStaticProps = async (context) => {
 
 function ProductDetail({product}) {
   //state
-  const [ quantity, setQuantity ] = useState(1)
+  const [ quantity, dispatch ] = useReducer(quantityReducer, 1);
   //Context
   const cartContextValue = useContext(CartContext)
+
+  console.log(quantity);
   
   const stylecase = (value) => {
     if (value) {
@@ -94,12 +98,12 @@ function ProductDetail({product}) {
           <div className={styles.footer}>
             <p>Quantité : </p>
             <div className={styles.product_quantity}>
-                <button className={styles.quantity_button} onClick={(e) => removeQuantity(e, quantity, setQuantity)}>-</button>
+                <button className={styles.quantity_button} onClick={() => dispatch({type: "REMOVE"})}>-</button>
                 <p>{quantity}</p>
-                <button className={styles.quantity_button} onClick={(e) => addQuantity(e, quantity, setQuantity)}>+</button>
+                <button className={styles.quantity_button} onClick={() => dispatch({type: "ADD"})}>+</button>
             </div>
             <p>{product.price} €</p>
-            <button onClick={(e) => addToCart(e, product, cartContextValue, quantity, setQuantity)} className={styles.add_button}>Ajouter au panier</button>
+            <button onClick={(e) => {addToCart(e, product, cartContextValue, quantity),dispatch({type: "RESET"})}} className={styles.add_button}>Ajouter au panier</button>
           </div>
         </div>
       </div>

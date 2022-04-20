@@ -1,5 +1,5 @@
 //base React
-import React, { useState , useContext } from 'react'
+import React, { useReducer , useContext } from 'react'
 import { CartContext } from '../pages/_app'
 //base next.js
 import Link from 'next/link'
@@ -7,14 +7,16 @@ import Image from 'next/image'
 //styles
 import styles from '../styles/comps/ProductCard.module.scss'
 
-import  { addToCart, addQuantity, removeQuantity }  from '../utils/addtocart'
+import  { addToCart }  from '../utils/addtocart'
+
+import { quantityReducer } from '../reducer/quantityReducer'
 
 
 function ProductCard({product}) {
     //context
     const cartContextValue = useContext(CartContext)
     //state
-    const [ quantity, setQuantity ] = useState(1)
+    const [quantity, dispatch] = useReducer(quantityReducer, 1)
     //fonction on button to add quantity
 
   return (
@@ -30,12 +32,12 @@ function ProductCard({product}) {
                 <div className={styles.product_footer}>
                     <p>Quantité : </p>
                     <div className={styles.product_quantity}>
-                        <button className={styles.quantity_button} onClick={(e) => removeQuantity(e, quantity, setQuantity)}>-</button>
+                        <button className={styles.quantity_button} onClick={(e) => {e.preventDefault(),dispatch({type: "REMOVE"})}}>-</button>
                         <p>{quantity}</p>
-                        <button className={styles.quantity_button} onClick={(e) => addQuantity(e, quantity, setQuantity)}>+</button>
+                        <button className={styles.quantity_button} onClick={(e) => {e.preventDefault(),dispatch({type: "ADD"})}}>+</button>
                     </div>
                     <p>{product.price} €</p>
-                    <button onClick={(e) => addToCart(e, product, cartContextValue, quantity, setQuantity)} className={styles.add_button}>Ajouter au panier</button>
+                    <button onClick={(e) => {addToCart(e, product, cartContextValue, quantity), dispatch({type: "RESET"})}} className={styles.add_button}>Ajouter au panier</button>
                 </div>
             </a>
         </Link>

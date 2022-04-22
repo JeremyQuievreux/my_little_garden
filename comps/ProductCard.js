@@ -21,26 +21,26 @@ function ProductCard({product}) {
 
   return (
         <div className={styles.container}>
-        <Link href={"/products/"+ product._id}>
-            <a>
-                <div className={styles.product_header}>
-                    <p>{product.name}</p>
-                </div>
-                <div className={styles.product_body}>
-                    <Image src={product.url_pic} alt="" height={300} width={300}/>
-                </div>
-                <div className={styles.product_footer}>
-                    <p>Quantité : </p>
-                    <div className={styles.product_quantity}>
-                        <button className={styles.quantity_button} onClick={(e) => {e.preventDefault(),dispatch({type: "REMOVE"})}}>-</button>
-                        <p>{quantity}</p>
-                        <button className={styles.quantity_button} onClick={(e) => {e.preventDefault(),dispatch({type: "ADD"})}}>+</button>
+            <Link href={"/products/"+ product._id}>
+                <a>
+                    <div className={styles.product_header}>
+                        <p>{product.name}</p>
                     </div>
-                    <p>{product.price} €</p>
-                    <button onClick={(e) => {addToCart(e, product, cartContextValue, quantity), dispatch({type: "RESET"})}} className={styles.add_button}>Ajouter au panier</button>
+                    <div className={styles.product_body}>
+                        <Image src={product.url_pic} alt="" height={300} width={300}/>
+                    </div>
+                </a>
+            </Link>
+            <div className={styles.product_footer}>
+                <p>Quantité : </p>
+                <div className={styles.product_quantity}>
+                    <button className={styles.quantity_button} onClick={(e) => {e.preventDefault(),dispatch({type: "REMOVE"})}}>-</button>
+                    <p>{quantity}</p>
+                    <button className={styles.quantity_button} onClick={(e) => {e.preventDefault(),dispatch({type: "ADD"})}}>+</button>
                 </div>
-            </a>
-        </Link>
+                <p>{product.price} €</p>
+                <button onClick={(e) => {addToCart(e, product, cartContextValue, quantity), dispatch({type: "RESET"})}} className={styles.add_button}>Ajouter au panier</button>
+            </div>
         </div>
   )
 }

@@ -34,8 +34,8 @@ function Header() {
           <nav className={styles.desktop_menu}>
             <Link href={"/"}><a><div><p>Acceuil</p></div></a></Link>
             <Link href={"/products"}><a><div><p>Nos Produits</p></div></a></Link>
-            <Link href={"/about"}><a><div><p>A Propos</p></div></a></Link>
-            <Link href={"/contact"}><a><div><p>Contactez nous</p></div></a></Link>
+            {/* <Link href={"/about"}><a><div><p>A Propos</p></div></a></Link>
+            <Link href={"/contact"}><a><div><p>Contactez nous</p></div></a></Link> */}
             <Link href={"/cart"}><a><div><p>Panier</p><p className={styles.cart_number}>{numberOfArticle}</p></div></a></Link>
           </nav>
           <div className={styles.menu_mobile}>
@@ -46,8 +46,8 @@ function Header() {
               <div className={styles.drop_down_menu}>
                 <Link href={"/"}><a onClick={() => toogleMenu()}><div><p>Acceuil</p></div></a></Link>
                 <Link href={"/products"}><a onClick={() => toogleMenu()}><div><p>Nos Produits</p></div></a></Link>
-                <Link href={"/about"}><a onClick={() => toogleMenu()}><div><p>A Propos</p></div></a></Link>
-                <Link href={"/contact"}><a onClick={() => toogleMenu()}><div><p>Contactez nous</p></div></a></Link>
+                {/* <Link href={"/about"}><a onClick={() => toogleMenu()}><div><p>A Propos</p></div></a></Link>
+                <Link href={"/contact"}><a onClick={() => toogleMenu()}><div><p>Contactez nous</p></div></a></Link> */}
                 <Link href={"/cart"}><a onClick={() => toogleMenu()}><div className={styles.cart_line}><p>Panier</p><p className={styles.cart_number}>{numberOfArticle}</p></div></a></Link>
               </div>
             }

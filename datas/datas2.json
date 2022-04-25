@@ -2,7 +2,7 @@
     {
         "name": "Aneth Officinale AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/25998/345x345/aneth-officinale-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -37,7 +37,7 @@
     {
         "name": "Anis Vert AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/21832/635x635/anis-vert-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -72,7 +72,7 @@
     {
         "name": "Basilic Anis AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24418/635x635/basilic-anis-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -107,7 +107,7 @@
     {
         "name": "Basilic Cannelle AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24422/635x635/basilic-cannelle-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -142,7 +142,7 @@
     {
         "name": "Basilic Citron AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/25248/635x635/basilic-citron-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -177,7 +177,7 @@
     {
         "name": "Basilic Citron AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/25248/635x635/basilic-citron-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -212,7 +212,7 @@
     {
         "name": "Basilic Citron Vert AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24424/635x635/basilic-citron-vert-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -247,7 +247,7 @@
     {
         "name": "Basilic Citron AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/25248/635x635/basilic-citron-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -282,7 +282,7 @@
     {
         "name": "Basilic Fin Vert Nain AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24433/635x635/basilic-fin-vert-nain-compact-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -317,7 +317,7 @@
     {
         "name": "Basilic Geant Monstrueux Mammouth AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24425/635x635/basilic-geant-monstrueux-mammouth-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -352,7 +352,7 @@
     {
         "name": "Basilic Genovese AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24862/635x635/basilic-genovese-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -387,7 +387,7 @@
     {
         "name": "Basilic Grec AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24426/635x635/basilic-grec-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -422,7 +422,7 @@
     {
         "name": "Basilic Marseillais AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24431/635x635/basilic-marseillais-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -457,7 +457,7 @@
     {
         "name": "Basilic Pourpre AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/28980/635x635/basilic-pourpre-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -492,7 +492,7 @@
     {
         "name": "Basilic Sacre AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/27608/635x635/basilic-sacre-ou-tulsi-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -527,7 +527,7 @@
     {
         "name": "Basilic Simple Grand Vert AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24441/635x635/basilic-simple-grand-vert-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -562,7 +562,7 @@
     {
         "name": "Basilic Thai AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24429/635x635/basilic-thai-ou-indonesien-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -597,7 +597,7 @@
     {
         "name": "Basilic Thym AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24863/635x635/basilic-thym-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -632,7 +632,7 @@
     {
         "name": "Bourrache Blanche AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/21833/635x635/bourrache-blanche-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -667,7 +667,7 @@
     {
         "name": "Bourrache Officinale AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/5657/635x635/bourrache-officinale-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -702,7 +702,7 @@
     {
         "name": "Cerfeuil Frise AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/26628/635x635/cerfeuil-frise-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": true,
             "fevrier": false,
@@ -737,7 +737,7 @@
     {
         "name": "Coriandre AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/21836/635x635/coriandre-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -772,7 +772,7 @@
     {
         "name": "Absinthe Commune AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/24824/635x635/absinthe-commune-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -807,7 +807,7 @@
     {
         "name": "Ciboulette Commune AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/2552/635x635/ciboulette-commune-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -842,7 +842,7 @@
     {
         "name": "Estragon du Mexique AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/25333/635x635/estragon-du-mexique-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -877,7 +877,7 @@
     {
         "name": "Melisse Citronnelle AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/23741/635x635/melisse-citronnelle-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -912,7 +912,7 @@
     {
         "name": "Melisse Orange AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/25343/635x635/melisse-orange-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -947,7 +947,7 @@
     {
         "name": "Menthe Glaciale NT",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/26865/635x635/menthe-glaciale-ou-menthe-des-montagnes-nt.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -982,7 +982,7 @@
     {
         "name": "Menthe Pomme AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/27355/635x635/menthe-pomme-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1017,7 +1017,7 @@
     {
         "name": "Menthe Verte AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/23728/635x635/menthe-verte-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": true,
             "fevrier": false,
@@ -1052,7 +1052,7 @@
     {
         "name": "Origan AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/21837/635x635/origan-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1087,7 +1087,7 @@
     {
         "name": "Origan Grec AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/21985/635x635/origan-grec-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1122,7 +1122,7 @@
     {
         "name": "Romarin AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/23132/635x635/romarin-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1157,7 +1157,7 @@
     {
         "name": "Sarriette Vivace AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/26888/635x635/sarriette-vivace-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1192,7 +1192,7 @@
     {
         "name": "Sauge Officinale AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/28883/635x635/sauge-officinale-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1227,7 +1227,7 @@
     {
         "name": "Thym Commun AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/4387/635x635/thym-commun-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1262,7 +1262,7 @@
     {
         "name": "Verveine Officinale NT",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/26898/635x635/verveine-officinale-nt.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,
@@ -1297,7 +1297,7 @@
     {
         "name": "Stevia Rebaudiana AB",
         "url_pic": "https://www.fermedesaintemarthe.com/Image/28884/635x635/stevia-rebaudiana-ab.webp",
-        "famille": "Aromatique",
+        "famille": "aromatique",
         "semis" : {
             "janvier": false,
             "fevrier": false,

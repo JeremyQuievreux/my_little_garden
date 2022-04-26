@@ -22,7 +22,7 @@ export async function getStaticProps() {
   }
 }
 //component
-function products({products}) {
+function Products({products}) {
 
   const sortByAlpha = (a, b) => {
     if (a.name < b.name) {
@@ -53,4 +53,4 @@ function products({products}) {
   )
 }
 
-export default products
+export default Products

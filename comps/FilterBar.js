@@ -17,7 +17,8 @@ function FilterBar({products, setAllProducts, allProducts}) {
 
   const filterFunc = (products, filter) => {
     if(filter === "all") {
-      return products
+      const notfilteredProduct = [...products]
+      return notfilteredProduct
     } else {
       const filteredProduct = products.filter(product => product.famille == filter)
       return filteredProduct

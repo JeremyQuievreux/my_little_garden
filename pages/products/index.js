@@ -40,8 +40,8 @@ function Products({products}) {
 
   return (
     <div className={styles.container}>
-        <h1>Nos Produits : </h1>
         <FilterBar products={orderedProducts} setAllProducts={setAllProducts} allProducts={allProducts}/>
+        <h1>Nos Produits : </h1>
         <div className={styles.products_container}>
           {allProducts.map((product) => {
             return(

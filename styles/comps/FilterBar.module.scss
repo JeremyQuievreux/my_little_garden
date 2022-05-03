@@ -1,0 +1,46 @@
+@import '../colors.scss';
+
+.filterbar_container{
+    border: 2px solid $dark_primary;
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: $primary;
+    margin: 20px;
+    .filter_element{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        select{
+            height: 30px;
+            margin: 10px;
+            width: 200px;
+            color: $dark_primary;
+            text-align: center;
+            font-size: 15px;
+        }
+        label{
+            color: $primary;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+    }
+}
+@media (max-width: 950px) {
+   .filterbar_container{
+       .filter_element{
+            width: 45%;
+       }
+   }
+}
+@media (max-width: 500px) {
+    .filterbar_container{
+        .filter_element{
+             width: 100%;
+        }
+    }
+ }

@@ -7,8 +7,8 @@ function Footer() {
     <div className={styles.container}>
         <p>DevHyllen 2022 © Copyright</p>
         <div>
-          <Link href={"/about"}><a onClick={() => toogleMenu()}><div><p>A Propos</p></div></a></Link>
-          <Link href={"/contact"}><a onClick={() => toogleMenu()}><div><p>Contactez nous</p></div></a></Link>
+          <Link href={"/about"}><a><div><p>A Propos</p></div></a></Link>
+          <Link href={"/contact"}><a><div><p>Contactez nous</p></div></a></Link>
         </div>
     </div>
   )
